@@ -40,7 +40,7 @@ function displayAreas(areasArray) {
     // Put Background For Each Country
 
     areasArray.map((item, index) => {
-        $(`.area-container:nth-of-type(${index + 1}) i`).css({ 'background-image': `url(../images/Flags/${index}.jpg` })
+        $(`.area-container:nth-of-type(${index + 1}) i`).css({ 'background-image': `url(images/Flags/${index}.jpg` })
     })
 
 
