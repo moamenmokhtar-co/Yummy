@@ -2,6 +2,7 @@
 import { toggleNavbar, redirectPage, homePage } from "./navbar.js";
 
 // ? =============> Global ===============>
+    let passwordInputContain = ''
 // ! =============> When Start ===============>
 // * =============> Events ===============>
 
@@ -10,14 +11,19 @@ import { toggleNavbar, redirectPage, homePage } from "./navbar.js";
 $('input').on('input', e => {
     const value = $(e.target).val();
     const currentInputId = e.target.id;
-    validation(value, currentInputId)
+    if (currentInputId == 'passwordInput') {
+        passwordInputContain = value
+        validation($('#rePasswordInput').val(), 'rePasswordInput', passwordInputContain);
+    }
+
+    validation(value, currentInputId, passwordInputContain)
 
 
 })
 
 
 // ! =============> Functions ===============>
-function validation(value, currentInputId) {
+function validation(value, currentInputId, passwordInputContain) {
 
     const regex = {
         'nameInput': /^[a-zA-Z\s]+$/,
@@ -25,13 +31,17 @@ function validation(value, currentInputId) {
         'phoneInput': /^\d{10,13}$/,
         'ageInput': /^([1-9]|[1-9][0-9])$/,
         'passwordInput': /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/,
-        'rePasswordInput': /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/,
-
     }
 
+    let instantValid;
 
+    if (currentInputId === 'rePasswordInput') {
+        instantValid = value === passwordInputContain;
+    } else {
 
-    const instantValid = regex[currentInputId].test(value);
+        instantValid = regex[currentInputId].test(value);
+    }
+
     // Specificall Msg After Assign currentInputId
     const specificallMsg = {
         'nameInput': 'Special characters and numbers not allowed',
