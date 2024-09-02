@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Contact Us</title>
+</head>
+
+<body class="home-page">
+    <nav class="nav-menu">
+        <div class="container d-flex flex-column justify-content-between h-100 text-white">
+            <ul class="list-unstyled overflow-hidden">
+                <li class="py-2 position-relative"><a id="search" class="fs-5 text-decoration-none text-white"
+                        href="#">Search</a></li>
+                <li class="py-2 position-relative"><a id="categories" class="fs-5 text-decoration-none text-white"
+                        href="#">Categories</a>
+                </li>
+                <li class="py-2 position-relative"><a id="area" class="fs-5 text-decoration-none text-white"
+                        href="#">Area</a></li>
+                <li class="py-2 position-relative"><a id="ingredients" class="fs-5 text-decoration-none text-white"
+                        href="#">Ingredients</a></li>
+                <li class="py-2 position-relative"><a id="contact-us" class="fs-5 text-decoration-none text-white"
+                        href="#">Contact Us</a>
+                </li>
+            </ul>
+            <div>
+                <div class="social">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-x-twitter"></i>
+                    <i class="fa-solid fa-globe"></i>
+                </div>
+                <p>&copy; Developed by <a href="https://www.linkedin.com/in/moamenmokhtar-co/" target="_blank"
+                        class="developer text-decoration-none">Moamen Mokhtar</a></p>
+            </div>
+        </div>
+    </nav>
+    <div class="navbar-col" data-active="false">
+        <div class="logo">
+            <img src="images/logo.png" alt="">
+        </div>
+        <i id="iconChange" class="fa-solid fa-bars fa fa-2xl"></i>
+        <div class="d-flex flex-column">
+            <i class="fa-solid fa-globe p-1"></i>
+            <i class="fa-solid fa-share-nodes p-1"></i>
+        </div>
+    </div>
+
+
+
+    <main class="contact-us d-flex justify-content-center align-items-center">
+        <form class="home py-5">
+            <div class="container w-75">
+                <div class="row g-4 justify-content-center align-items-center">
+                    <div class="col-md-12">
+                        <div class="contact-title">
+                            <h3 class="text-center display-6 fw-bold">Contact Us</h3>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="input">
+                            <input id="nameInput" class="form-control" type="text" placeholder="Enter Your Name" data-valid="false">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="input">
+                            <input id="emailInput" class="form-control" type="email" placeholder="Enter Your Email" data-valid="false">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="input">
+                            <input id="phoneInput" class="form-control" type="tel" placeholder="Enter Your Phone" data-valid="false">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="input">
+                            <input id="ageInput" class="form-control" type="number" placeholder="Enter Your Age" data-valid="false">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="input">
+                            <input id="passwordInput" class="form-control" type="password" placeholder="Enter Your Password" data-valid="false">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="input">
+                            <input id="rePasswordInput" class="form-control" type="password" placeholder="Enter Your Re-Password" data-valid="false">
+                        </div>
+                    </div>
+                    <div class="col-md-12 mt-5">
+                        <div class="submit mx-auto w-25">
+                            <button id="submitBtn" type="submit" class="btn btn-outline-danger w-100">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+    </main>
+
+
+
+
+
+
+
+    <!-- <div class="loading">
+        <span class="loader"></span>
+    </div> -->
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/contact-us.js" type="module"></script>
+</body>
+
+</html>
